@@ -1,0 +1,78 @@
+$container_width: 70px;
+$container_height: 70px;
+
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.task__container {
+  border: 1px solid $darkGray;
+  border-bottom: 6px solid $darkGray;
+  background-color: $white;
+  border-radius: 6px;
+  position: relative;
+  min-width: $container_width;
+  min-height: $container_height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: 0.2s;
+
+  &_selected {
+    @extend .task__container;
+    background-color: $alto;
+  }
+
+  .task__drag_point__aligner {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &_top {
+      @extend .task__drag_point__aligner;
+      align-items: flex-start;
+      top: -7px;
+    }
+
+    &_right {
+      @extend .task__drag_point__aligner;
+      justify-content: flex-end;
+      left: 7px;
+    }
+
+    &_bottom {
+      @extend .task__drag_point__aligner;
+      align-items: flex-end;
+      top: 10px;
+    }
+
+    &_left {
+      @extend .task__drag_point__aligner;
+      justify-content: flex-start;
+      left: -7px;
+    }
+  }
+
+  .task__caption {
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    text-align: center;
+    font-size: 11px;
+
+    &_editable {
+      @extend .task__caption;
+      resize: none;
+      border: none;
+      overflow: hidden;
+    }
+  }
+}

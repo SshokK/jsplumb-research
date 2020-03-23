@@ -1,0 +1,76 @@
+@import "../../../static/css/colors.scss";
+
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.config_tool__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .jtk-surface {
+    width: 100%;
+    height: 100%;
+  }
+
+  .jtk-overlay {
+    display: none;
+  }
+
+  .jtk-surface-pan {
+    display: none;
+  }
+
+  svg.connector.jtk-dragging path {
+    stroke: $darkGray;
+
+    &:first-child {
+      stroke-dasharray: 3;
+      stroke-width: 0.5;
+    }
+  }
+
+  svg.connector path {
+    stroke: $silver;
+
+    &:first-child {
+      stroke-width: 0.5;
+    }
+  }
+
+  svg.connector_hover path:first-child {
+    stroke: $darkGray;
+    stroke-dasharray: 0;
+    stroke-width: 0.5;
+  }
+
+  .config_tool__left_panel {
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    .config_tool__tasks_menu {
+
+    }
+
+    .config_tool__zoom_buttons {
+      margin-top: 50px;
+    }
+  }
+
+  .config_tool__top_panel {
+    margin-top: 30px;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+  }
+}

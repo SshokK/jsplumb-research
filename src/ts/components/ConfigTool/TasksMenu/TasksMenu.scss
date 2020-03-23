@@ -1,0 +1,23 @@
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.task_menu__container {
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  min-width: 120px;
+
+  .task_menu__caption {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

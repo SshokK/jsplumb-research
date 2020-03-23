@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -50,7 +50,7 @@ function getAdditionalModulePaths(options = {}) {
   // Otherwise, throw an error.
   throw new Error(
     chalk.red.bold(
-      "Your project's `baseUrl` can only be set to `src` or `node_modules`." +
+      'Your project\'s `baseUrl` can only be set to `src` or `node_modules`.' +
         ' Create React App does not support other values at this time.'
     )
   );
@@ -72,7 +72,16 @@ function getWebpackAliases(options = {}) {
 
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
-      src: paths.appSrc,
+      '~': paths.appSrc,
+      Actions: `${paths.appSrc}/ts/actions`,
+      Containers: `${paths.appSrc}/ts/containers`,
+      Reducers: `${paths.appSrc}/ts/reducers`,
+      Components: `${paths.appSrc}/ts/components`,
+      Types: `${paths.appSrc}/ts/types`,
+      Utils: `${paths.appSrc}/ts/utils`,
+      Tests: `${paths.appSrc}/ts/tests`,
+      Styles: `${paths.appSrc}/static/css`,
+      Icons: `${paths.appSrc}/static/icons`
     };
   }
 }
@@ -93,7 +102,7 @@ function getJestAliases(options = {}) {
 
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
-      '^src/(.*)$': '<rootDir>/src/$1',
+      '^src/(.*)$': '<rootDir>/src/$1'
     };
   }
 }
@@ -116,7 +125,7 @@ function getModules() {
   // based on tsconfig.json
   if (hasTsConfig) {
     const ts = require(resolve.sync('typescript', {
-      basedir: paths.appNodeModules,
+      basedir: paths.appNodeModules
     }));
     config = ts.readConfigFile(paths.appTsConfig, ts.sys.readFile).config;
     // Otherwise we'll check if there is jsconfig.json
@@ -134,7 +143,7 @@ function getModules() {
     additionalModulePaths: additionalModulePaths,
     webpackAliases: getWebpackAliases(options),
     jestAliases: getJestAliases(options),
-    hasTsConfig,
+    hasTsConfig
   };
 }
 

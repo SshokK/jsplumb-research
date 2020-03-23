@@ -1,0 +1,50 @@
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.select__container {
+
+  .select__control {
+    border: none;
+  }
+
+  .select__option {
+    color: $black;
+    transition: 0.1s;
+    cursor: pointer;
+    background-color: $white;
+
+    &--is-focused {
+      background-color: $dirtyWhite;
+    }
+
+    &--is-selected {
+      &:not(.select__option--is-focused) {
+        background: none !important;
+      }
+    }
+  }
+
+  .select__control--is-focused {
+    border-color: $alto !important;
+    box-shadow: none;
+  }
+
+  .select__multi-value {
+    background-color: $white;
+    padding: 10px 15px;
+    border: 1px solid $darkGray;
+    border-bottom: 3px solid $darkGray;
+    border-radius: 6px;
+    font-size: 16px;
+    color: $darkGray;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+}

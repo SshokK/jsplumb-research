@@ -1,0 +1,24 @@
+$alto: #d1d1d1;
+$silver: #BABABA;
+
+.task_icon {
+  height: fit-content;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  path:last-child {
+    fill: $silver;
+  }
+
+  &.notification,
+  &.sms {
+    path:first-child {
+      fill: $silver;
+    }
+    path:last-child {
+      fill: none;
+    }
+  }
+}

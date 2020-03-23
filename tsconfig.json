@@ -8,18 +8,20 @@
     ],
     "typeRoots": [
       "node_modules/@types",
-      "./src/types"
+      "./src/ts/types"
     ],
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/types/*"],
+      "*": ["./src/ts/types/*"],
       "~/*": ["./src/*"],
-      "Actions/*": ["./src/actions/*"],
-      "Containers/*": ["./src/containers/*"],
-      "Reducers/*": ["./src/reducers/*"],
-      "Components/*": ["./src/components/*"],
-      "Utils/*": ["./src/utils/*"],
-      "Tests/*": ["./src/tests/*"]
+      "Actions/*": ["./src/ts/actions/*"],
+      "Containers/*": ["./src/ts/containers/*"],
+      "Reducers/*": ["./src/ts/reducers/*"],
+      "Components/*": ["./src/ts/components/*"],
+      "Utils/*": ["./src/ts/utils/*"],
+      "Tests/*": ["./src/ts/tests/*"],
+      "Styles/*":["./src/static/css/*"],
+      "Icons/*": ["./src/static/icons/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -34,9 +36,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
     "node_modules"
   ]

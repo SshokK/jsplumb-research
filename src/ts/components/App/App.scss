@@ -1,0 +1,22 @@
+.app__container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+
+  .app__inner_content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+
+    .app__config_tool_wrapper {
+      position: relative;
+      flex: 1;
+    }
+  }
+}

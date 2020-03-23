@@ -1,0 +1,35 @@
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.processes_menu__container {
+  display: flex;
+  margin-left: 200px;
+
+  .processes_menu__processes_wrapper {
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+
+    .processes_menu__process_name {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .processes_menu__process_picker_wrapper {
+      max-width: 250px;
+      min-width: 250px;
+    }
+  }
+}
+

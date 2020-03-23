@@ -1,0 +1,14 @@
+$silver: #BABABA;
+$darkGray: #575757;
+
+.palette__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    color: $darkGray;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

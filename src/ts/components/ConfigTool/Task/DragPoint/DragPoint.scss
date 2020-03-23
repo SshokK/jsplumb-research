@@ -1,0 +1,65 @@
+$drag-point-dimensions: 10px;
+
+$alto: #d1d1d1;
+$darkGray: #575757;
+$black: #202020;
+$silver: #BABABA;
+$white: white;
+$dirtyWhite: #f7f7f7;
+
+.task__drag_point {
+  position: relative;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $darkGray;
+  min-width: $drag-point-dimensions;
+  max-width: $drag-point-dimensions;
+  min-height: $drag-point-dimensions;
+  max-height: $drag-point-dimensions;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.2s;
+
+  &.active,
+  &:hover {
+    background-color: $alto;
+  }
+}
+
+.task__events_popup__container {
+  width: 200px;
+  position: absolute;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  padding: 15px;
+  left: 100%;
+  transform: translateY(-100%);
+
+
+  .task__events_popup__header {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .task__events_popup__events_list {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+
+    li {
+      border-radius: 4px;
+      padding: 5px 10px;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: $alto;
+      }
+    }
+  }
+}
