@@ -79,7 +79,7 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
     "react-app-polyfill": "^1.0.6",
-    "react-dev-utils": "^10.2.0",
+    "react-dev-utils": "^11.0.4",
     "redux-devtools-extension": "^2.13.8",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
